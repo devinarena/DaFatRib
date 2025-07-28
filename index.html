@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DaFatRib</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const toggleCursor = document.getElementById("toggle-cursor");
+                toggleCursor.checked = false; // Default state
+                toggleCursor.addEventListener("change", () =>  {
+                    if (toggleCursor.checked) {
+                        document.body.style.setProperty("--custom-cursor", "url('./images/DragonScimi.cur')");
+                    } else {
+                        document.body.style.setProperty("--custom-cursor", "auto");
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="container-section profile fade-in">
+                <img src="./images/placeholder.png" alt="placeholder">
+            </div>
+            <div class="container-section about fade-in delay-1">
+                <h1><u>DaFatRib</u></h1>
+                <h2>About</h2>
+                <p>DaFatRib streams Oldschool Runescape on Twitch and Kick.</p>
+            </div>
+            <div class="container-section links fade-in delay-2">
+                <ul>
+                    <li class="fade-in delay-2"><a href="https://www.twitch.tv/DaFatRib">Twitch</a></li>
+                    <li class="fade-in delay-3"><a href="https://www.kick.com/DaFatRib">Kick</a></li>
+                    <li class="fade-in delay-4"><a href="https://www.youtube.com/@lucasa8975">YouTube</a></li>
+                    <li class="fade-in delay-5"><a href="">Other Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="toggle">
+                <input type="checkbox" id="toggle-cursor" class="toggle-cursor">
+                <label for="toggle-cursor">Custom Cursor</label>
+            </div>
+            <p>Copyright 2025 &copy; DaFatRib. &nbsp; More coming soon...</p>
+        </div>
+    </body>
+</html>

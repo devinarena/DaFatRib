@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: var(--custom-cursor), auto !important;
+    background: linear-gradient(180deg, #E2DBC8, #C0A886);
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    min-height: 100vh;
+    --custom-cursor: auto;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5% 2%;
+    max-width: 20%;
+}
+
+.profile img {
+    max-width: 100%;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.about h1 {
+    width: 100%;
+    font-size: 40px;
+    margin-bottom: 5%;
+}
+
+.about h2 {
+    width: 100%;
+}
+
+.about p {
+    font-size: 24px;
+}
+
+.footer {
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle * {
+    cursor: inherit;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.links ul li {
+    width: 100%;
+}
+
+.links ul li a {
+    cursor: inherit hand;
+    font-size: 32px;
+    padding: 5px;
+    width: 100%;
+    text-decoration: none;
+    color: darkolivegreen;
+    font-weight: bold;
+    transition: color 0.5s ease, background 0.5s ease;
+}
+
+.links a:hover {
+    color: olive;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* animation stuff */
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.delay-1 {
+    animation-delay: 0.25s;
+}
+.delay-2 {
+    animation-delay: 0.5s;
+}
+.delay-3 {
+    animation-delay: 0.75s;
+}
+.delay-4 {
+    animation-delay: 1s;
+}
+.delay-5 {
+    animation-delay: 1.25s;
+}
+.delay-6 {
+    animation-delay: 1.5s;
+}
+
+/* mobile */
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container-section {
+        max-width: 90%;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about h1 {
+        font-size: 32px;
+    }
+
+    .about p {
+        font-size: 20px;
+    }
+
+    .links ul li a {
+        font-size: 24px;
+    }
+}
