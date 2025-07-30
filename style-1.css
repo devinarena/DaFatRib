@@ -19,10 +19,11 @@ body {
 
 .container {
     width: 100%;
+    min-height: 60vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .container-section {
@@ -80,6 +81,7 @@ body {
 }
 
 .links ul {
+    list-style: none;
     margin: 10px;
     padding-left: 20%;
 }
@@ -89,6 +91,8 @@ body {
 }
 
 .links ul li a {
+    display: flex;
+    align-items: center;
     cursor: inherit hand;
     font-size: 32px;
     padding: 5px;
@@ -100,9 +104,20 @@ body {
     text-wrap: nowrap;
 }
 
+.links ul li a img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
 .links a:hover {
     color: olive;
     background: rgba(255, 255, 255, 0.2);
+}
+
+.tiny {
+    font-size: 10px;
+    transform: translate(-5px, -5px);
 }
 
 /* animation stuff */
@@ -155,6 +170,10 @@ body {
         width: 90%;
         justify-content: center;
         align-items: start;
+    }
+
+    .about {
+        align-items: center;
     }
 
     .about h1 {
